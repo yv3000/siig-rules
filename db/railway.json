@@ -1,0 +1,1 @@
+{"id":"railway","name":"Railway","detect":{"files":["railway.toml","railway.json"],"dirs":[]},"rules":{"gitignore":[".env",".env.*","node_modules/","dist/","build/"]}}

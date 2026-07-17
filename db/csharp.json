@@ -1,0 +1,18 @@
+{
+  "id": "csharp",
+  "name": "C#",
+  "detect": {
+    "files": ["*.cs", "*.csproj", "*.sln", "NuGet.Config", "packages.config"],
+    "dirs": ["obj", "packages"]
+  },
+  "rules": {
+    "gitignore": [
+      "bin/", "obj/", "*.user", "*.suo", ".vs/", "packages/",
+      "*.nupkg", "*.snupkg", "project.lock.json",
+      "TestResult.xml", "*.coverage", ".localhistory/",
+      "BenchmarkDotNet.Artifacts/", "_ReSharper*/", "*.DotSettings.user"
+    ],
+    "dockerignore": ["bin/", "obj/", ".vs/"],
+    "vscode": { "files.exclude": { "bin": true, "obj": true, ".vs": true } }
+  }
+}

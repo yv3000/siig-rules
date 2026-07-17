@@ -1,0 +1,15 @@
+{
+  "id": "kubernetes",
+  "name": "Kubernetes / Helm",
+  "detect": {
+    "files": ["Chart.yaml", "values.yaml", "kubeconfig", "*.yaml", "kustomization.yaml", "skaffold.yaml"],
+    "dirs": ["charts", "templates"]
+  },
+  "rules": {
+    "gitignore": [
+      "kubeconfig", "*.kubeconfig", "secrets.yaml",
+      "*-secret.yaml", "*-secrets.yaml", "values-local.yaml",
+      "values-prod.yaml", ".helmignore"
+    ]
+  }
+}

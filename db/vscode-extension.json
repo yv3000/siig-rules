@@ -1,0 +1,22 @@
+{
+  "id": "vscode-extension",
+  "name": "VS Code Extension",
+  "detect": {
+    "files": [".vscodeignore", ".vscode/launch.json"],
+    "dirs": [".vscode"]
+  },
+  "rules": {
+    "gitignore": [
+      "out/",
+      "dist/",
+      "node_modules/",
+      ".vscode-test/",
+      "*.vsix",
+      ".env"
+    ],
+    "dockerignore": [
+      "out/",
+      "node_modules/"
+    ]
+  }
+}

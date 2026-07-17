@@ -1,0 +1,15 @@
+{
+  "id": "nuxt",
+  "name": "Nuxt.js",
+  "detect": {
+    "files": ["nuxt.config.ts", "nuxt.config.js"],
+    "dirs": [".nuxt", ".output"]
+  },
+  "rules": {
+    "gitignore": [
+      ".nuxt/", ".output/", ".nitro/", ".cache/",
+      "node_modules/", "dist/", ".env", ".env.*", "*.log"
+    ],
+    "vercelignore": [".nuxt/", "node_modules/", ".env"]
+  }
+}

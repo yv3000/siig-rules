@@ -1,0 +1,15 @@
+{
+  "id": "dart",
+  "name": "Dart",
+  "detect": {
+    "files": ["pubspec.yaml", "pubspec.lock", "*.dart", "analysis_options.yaml"],
+    "dirs": [".dart_tool"]
+  },
+  "rules": {
+    "gitignore": [
+      ".dart_tool/", ".packages", "build/", "pubspec.lock",
+      ".fvm/", "doc/api/", ".idea/", "*.iml"
+    ],
+    "vscode": { "files.exclude": { ".dart_tool": true, "build": true } }
+  }
+}

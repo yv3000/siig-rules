@@ -1,0 +1,14 @@
+{
+  "id": "bun",
+  "name": "Bun",
+  "detect": {
+    "files": ["bun.lockb", "bunfig.toml"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/", "dist/", ".env", ".env.*",
+      "*.log", "bun.lockb"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "id": "node",
+  "name": "Node.js",
+  "detect": {
+    "files": ["package.json", "package-lock.json", "yarn.lock", "pnpm-lock.yaml"],
+    "dirs": ["node_modules"]
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/",
+      ".env",
+      ".env.local",
+      ".env.*.local",
+      "dist/",
+      "build/",
+      ".cache/",
+      "*.log",
+      "npm-debug.log*",
+      "yarn-debug.log*",
+      "yarn-error.log*",
+      ".DS_Store"
+    ],
+    "vercelignore": [
+      "node_modules/",
+      ".env"
+    ],
+    "dockerignore": [
+      "node_modules/",
+      ".env",
+      "*.log"
+    ],
+    "vscode": {
+      "files.exclude": {
+        "node_modules": true
+      }
+    }
+  }
+}

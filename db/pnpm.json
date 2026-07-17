@@ -1,0 +1,1 @@
+{"id":"pnpm","name":"pnpm Workspace","detect":{"files":["pnpm-workspace.yaml","pnpm-lock.yaml",".pnpmfile.cjs"],"dirs":[]},"rules":{"gitignore":["node_modules/",".env","dist/","*.log"]}}

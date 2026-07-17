@@ -1,0 +1,16 @@
+{
+  "id": "pytorch",
+  "name": "PyTorch / ML",
+  "detect": {
+    "files": ["train.py", "model.py", "requirements.txt"],
+    "dirs": ["checkpoints", "runs", "wandb"]
+  },
+  "rules": {
+    "gitignore": [
+      "checkpoints/", "runs/", "wandb/", "mlruns/",
+      "*.pt", "*.pth", "*.onnx", "*.pkl", "*.h5",
+      "data/", "__pycache__/", ".venv/", "venv/", ".env",
+      "lightning_logs/", "outputs/"
+    ]
+  }
+}

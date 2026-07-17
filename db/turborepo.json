@@ -1,0 +1,14 @@
+{
+  "id": "turborepo",
+  "name": "Turborepo",
+  "detect": {
+    "files": ["turbo.json"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/", ".turbo/", "dist/", "build/",
+      ".env", ".env.*", "!.env.example"
+    ]
+  }
+}

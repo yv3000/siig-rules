@@ -1,0 +1,16 @@
+{
+  "id": "django",
+  "name": "Django",
+  "detect": {
+    "files": ["manage.py", "wsgi.py", "asgi.py", "django.po"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "*.pyc", "__pycache__/", ".venv/", "venv/", "db.sqlite3",
+      "db.sqlite3-journal", "media/", "staticfiles/",
+      ".env", "local_settings.py", "*.log", ".pytest_cache/"
+    ],
+    "dockerignore": ["__pycache__/", ".venv/", "*.pyc", ".env", "db.sqlite3"]
+  }
+}

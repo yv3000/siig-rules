@@ -1,0 +1,15 @@
+{
+  "id": "nx",
+  "name": "Nx Monorepo",
+  "detect": {
+    "files": ["nx.json", "workspace.json"],
+    "dirs": [".nx"]
+  },
+  "rules": {
+    "gitignore": [
+      "dist/", ".nx/cache/", ".nx/workspace-data/", "node_modules/",
+      ".env", "tmp/"
+    ],
+    "vscode": { "files.exclude": { ".nx": true } }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "id": "nextjs",
+  "name": "Next.js",
+  "detect": {
+    "files": ["next.config.js", "next.config.mjs", "next.config.ts"],
+    "dirs": [".next"]
+  },
+  "rules": {
+    "gitignore": [
+      ".next/",
+      "out/",
+      ".env.local",
+      ".env.*.local",
+      ".vercel",
+      "*.tsbuildinfo",
+      "next-env.d.ts"
+    ],
+    "vercelignore": [
+      "node_modules/",
+      ".next/",
+      ".env",
+      ".env.local"
+    ],
+    "dockerignore": [
+      ".next/",
+      "node_modules/",
+      ".env"
+    ]
+  }
+}

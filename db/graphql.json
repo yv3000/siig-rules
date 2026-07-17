@@ -1,0 +1,14 @@
+{
+  "id": "graphql",
+  "name": "GraphQL",
+  "detect": {
+    "files": ["schema.graphql", "schema.gql", "*.graphql", "codegen.yml", "codegen.ts"],
+    "dirs": ["__generated__"]
+  },
+  "rules": {
+    "gitignore": [
+      "__generated__/", ".graphql-inspector/", "*.generated.ts",
+      "*.generated.js", "schema.json"
+    ]
+  }
+}

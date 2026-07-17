@@ -1,0 +1,15 @@
+{
+  "id": "perl",
+  "name": "Perl",
+  "detect": {
+    "files": ["*.pl", "*.pm", "*.pod", "Makefile.PL", "Build.PL", "cpanfile", "META.yml", "META.json"],
+    "dirs": ["local", "blib"]
+  },
+  "rules": {
+    "gitignore": [
+      "blib/", "local/", "_Inline/", "cover_db/", "nytprof.out",
+      "MYMETA.yml", "MYMETA.json", "pm_to_blib", "*.o", "*.bs",
+      "Makefile", "Build", "_build/", "Build.bat", "*.ppd"
+    ]
+  }
+}

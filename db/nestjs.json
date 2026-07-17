@@ -1,0 +1,16 @@
+{
+  "id": "nestjs",
+  "name": "NestJS",
+  "detect": {
+    "files": ["nest-cli.json", "nestconfig.json"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/", "dist/", ".env", ".env.*",
+      "*.log", ".DS_Store", "coverage/"
+    ],
+    "dockerignore": ["node_modules/", "dist/", ".env"],
+    "vercelignore": ["node_modules/", "dist/", ".env"]
+  }
+}

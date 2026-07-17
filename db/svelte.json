@@ -1,0 +1,16 @@
+{
+  "id": "svelte",
+  "name": "Svelte / SvelteKit",
+  "detect": {
+    "files": ["svelte.config.js", "svelte.config.ts", "*.svelte"],
+    "dirs": [".svelte-kit"]
+  },
+  "rules": {
+    "gitignore": [
+      ".svelte-kit/", "node_modules/", "build/", "dist/",
+      ".env", ".env.*", "!.env.example", "*.log"
+    ],
+    "vercelignore": ["node_modules/", ".svelte-kit/", ".env"],
+    "dockerignore": ["node_modules/", ".svelte-kit/", ".env"]
+  }
+}

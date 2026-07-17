@@ -1,0 +1,13 @@
+{
+  "id": "mongodb",
+  "name": "MongoDB",
+  "detect": {
+    "files": ["mongod.conf", "mongodb.conf", ".mongorc.js"],
+    "dirs": ["data/db"]
+  },
+  "rules": {
+    "gitignore": [
+      "data/db/", "mongod.lock", "*.bson", "dump/", ".env"
+    ]
+  }
+}

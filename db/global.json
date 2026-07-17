@@ -1,0 +1,22 @@
+{
+  "id": "global",
+  "name": "Global",
+  "detect": null,
+  "rules": {
+    "gitignore": [
+      ".env",
+      ".env.*",
+      "*.pem",
+      "*.key",
+      "*.p12",
+      "*.pfx",
+      "secrets/",
+      ".secrets",
+      "*.secret",
+      "*.credentials",
+      ".DS_Store",
+      "Thumbs.db",
+      "desktop.ini"
+    ]
+  }
+}

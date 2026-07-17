@@ -1,0 +1,15 @@
+{
+  "id": "astro",
+  "name": "Astro",
+  "detect": {
+    "files": ["astro.config.mjs", "astro.config.ts", "astro.config.js"],
+    "dirs": [".astro"]
+  },
+  "rules": {
+    "gitignore": [
+      "dist/", ".astro/", "node_modules/", ".env", ".env.*",
+      "!.env.example", "*.log"
+    ],
+    "vercelignore": ["node_modules/", "dist/", ".env"]
+  }
+}

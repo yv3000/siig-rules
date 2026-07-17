@@ -1,0 +1,17 @@
+{
+  "id": "kotlin-jvm",
+  "name": "Kotlin (JVM/Multiplatform)",
+  "detect": {
+    "files": ["build.gradle.kts", "settings.gradle.kts", "*.kt", "gradle.properties"],
+    "dirs": [".gradle", ".kotlin"]
+  },
+  "rules": {
+    "gitignore": [
+      "build/", ".gradle/", ".kotlin/", "out/", "*.class",
+      "*.jar", "*.war", "*.ear", "local.properties", ".idea/",
+      "*.iml", "*.iws", "*.ipr", "gradle-wrapper.jar"
+    ],
+    "dockerignore": ["build/", ".gradle/", "*.class"],
+    "vscode": { "files.exclude": { "build": true, ".gradle": true } }
+  }
+}

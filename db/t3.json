@@ -1,0 +1,16 @@
+{
+  "id": "t3",
+  "name": "T3 Stack (Next.js + tRPC + Prisma)",
+  "detect": {
+    "files": ["trpc", "prisma/schema.prisma"],
+    "dirs": ["prisma"]
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/", ".next/", "dist/", ".env",
+      ".env.*", "!.env.example", "*.log", "prisma/migrations/",
+      ".vercel/"
+    ],
+    "vercelignore": ["node_modules/", ".next/", ".env"]
+  }
+}

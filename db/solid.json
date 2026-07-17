@@ -1,0 +1,1 @@
+{"id":"solid","name":"SolidJS","detect":{"files":["solid.config.ts","solid.config.js"],"dirs":[]},"rules":{"gitignore":["node_modules/","dist/",".env",".env.*","*.log"]}}

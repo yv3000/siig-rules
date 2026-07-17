@@ -1,0 +1,15 @@
+{
+  "id": "maven",
+  "name": "Maven",
+  "detect": {
+    "files": ["pom.xml", ".mvnw", "mvnw"],
+    "dirs": [".mvn"]
+  },
+  "rules": {
+    "gitignore": [
+      "target/", ".mvn/wrapper/maven-wrapper.jar",
+      "*.class", "*.jar", "*.war", ".idea/", "*.iml"
+    ],
+    "dockerignore": ["target/", "*.class"]
+  }
+}

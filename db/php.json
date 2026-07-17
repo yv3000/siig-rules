@@ -1,0 +1,29 @@
+{
+  "id": "php",
+  "name": "PHP",
+  "detect": {
+    "files": ["composer.json", "composer.lock", "artisan"],
+    "dirs": ["vendor"]
+  },
+  "rules": {
+    "gitignore": [
+      "vendor/",
+      "node_modules/",
+      ".env",
+      ".phpunit.result.cache",
+      "Homestead.yaml",
+      "Homestead.json",
+      "npm-debug.log",
+      "yarn-error.log",
+      "storage/*.key",
+      ".idea/",
+      "*.log"
+    ],
+    "dockerignore": [
+      "vendor/",
+      "node_modules/",
+      ".env",
+      "storage/logs/"
+    ]
+  }
+}

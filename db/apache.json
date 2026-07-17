@@ -1,0 +1,1 @@
+{"id":"apache","name":"Apache","detect":{"files":[".htaccess","httpd.conf","apache2.conf"],"dirs":[]},"rules":{"gitignore":["*.pid","logs/","error.log","access.log","*.key","*.crt"]}}

@@ -1,0 +1,14 @@
+{
+  "id": "groovy",
+  "name": "Groovy",
+  "detect": {
+    "files": ["*.groovy", "*.gradle", "Jenkinsfile", "Gruntfile.groovy"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "build/", ".gradle/", "*.class", "out/", "local.properties",
+      ".idea/", "*.iml", ".groovylintrc.json"
+    ]
+  }
+}

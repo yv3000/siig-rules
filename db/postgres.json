@@ -1,0 +1,13 @@
+{
+  "id": "postgres",
+  "name": "PostgreSQL",
+  "detect": {
+    "files": ["postgresql.conf", "pg_hba.conf", "*.sql", "schema.sql"],
+    "dirs": ["migrations", "seeds"]
+  },
+  "rules": {
+    "gitignore": [
+      ".env", "*.dump", "*.sql.bak", "pg_log/", "pgdata/"
+    ]
+  }
+}

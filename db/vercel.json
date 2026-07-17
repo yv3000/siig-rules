@@ -1,0 +1,19 @@
+{
+  "id": "vercel",
+  "name": "Vercel",
+  "detect": {
+    "files": ["vercel.json", ".vercelignore"],
+    "dirs": [".vercel"]
+  },
+  "rules": {
+    "gitignore": [
+      ".vercel"
+    ],
+    "vercelignore": [
+      "node_modules/",
+      ".env",
+      ".env.local",
+      ".git"
+    ]
+  }
+}

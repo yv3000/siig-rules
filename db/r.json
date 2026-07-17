@@ -1,0 +1,17 @@
+{
+  "id": "r",
+  "name": "R",
+  "detect": {
+    "files": ["DESCRIPTION", "NAMESPACE", "*.R", "*.Rmd", "*.Rproj", ".Rprofile", "renv.lock"],
+    "dirs": ["renv", ".Rproj.user"]
+  },
+  "rules": {
+    "gitignore": [
+      ".Rproj.user/", ".Rhistory", ".RData", ".Ruserdata",
+      "renv/library/", "renv/staging/", "*.Rcheck/",
+      "*.tar.gz", "*.tgz", "vignettes/*.html", "vignettes/*.pdf",
+      "inst/doc/", "docs/", "packrat/"
+    ],
+    "vscode": { "files.exclude": { ".Rproj.user": true, "renv/library": true } }
+  }
+}

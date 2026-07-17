@@ -1,0 +1,16 @@
+{
+  "id": "julia",
+  "name": "Julia",
+  "detect": {
+    "files": ["Project.toml", "Manifest.toml", "*.jl"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "Manifest.toml", "*.jl.cov", "*.jl.*.cov", "*.jl.mem",
+      "deps/downloads/", "deps/usr/", "deps/build.log",
+      "docs/build/", "docs/site/", "*.so", "*.dylib", "*.dll",
+      "/.CondaPkg/"
+    ]
+  }
+}

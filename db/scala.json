@@ -1,0 +1,16 @@
+{
+  "id": "scala",
+  "name": "Scala",
+  "detect": {
+    "files": ["build.sbt", "*.scala", "build.sc", "mill"],
+    "dirs": [".bsp", "target"]
+  },
+  "rules": {
+    "gitignore": [
+      "target/", ".bsp/", ".bloop/", ".metals/", ".idea/",
+      "*.class", "*.jar", "project/target/", "project/project/",
+      ".worksheet/", "dist/"
+    ],
+    "vscode": { "files.exclude": { "target": true, ".metals": true, ".bloop": true } }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "id": "remix",
+  "name": "Remix",
+  "detect": {
+    "files": ["remix.config.js", "remix.config.ts", "remix.env.d.ts"],
+    "dirs": [".cache", "public/build"]
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/", ".cache/", "build/", "public/build/",
+      ".env", ".env.*", "*.log"
+    ],
+    "vercelignore": ["node_modules/", "build/", ".env"]
+  }
+}

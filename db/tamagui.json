@@ -1,0 +1,1 @@
+{"id":"tamagui","name":"Tamagui","detect":{"files":["tamagui.config.ts","tamagui.config.js"],"dirs":[".tamagui"]},"rules":{"gitignore":["node_modules/",".tamagui/","dist/",".env"]}}

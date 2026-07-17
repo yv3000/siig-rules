@@ -1,0 +1,13 @@
+{
+  "id": "nix",
+  "name": "Nix",
+  "detect": {
+    "files": ["flake.nix", "flake.lock", "default.nix", "shell.nix", "configuration.nix"],
+    "dirs": [".direnv"]
+  },
+  "rules": {
+    "gitignore": [
+      "result", "result-*", ".direnv/", ".envrc.local"
+    ]
+  }
+}

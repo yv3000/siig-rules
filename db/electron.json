@@ -1,0 +1,15 @@
+{
+  "id": "electron",
+  "name": "Electron",
+  "detect": {
+    "files": ["electron-builder.yml", "electron-builder.json", "electron.vite.config.ts", "forge.config.js"],
+    "dirs": ["out", "release"]
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/", "dist/", "out/", "release/", ".env",
+      "*.log", ".DS_Store"
+    ],
+    "vscode": { "files.exclude": { "out": true } }
+  }
+}

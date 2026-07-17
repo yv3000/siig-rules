@@ -1,0 +1,1 @@
+{"id":"drizzle","name":"Drizzle ORM","detect":{"files":["drizzle.config.ts","drizzle.config.js"],"dirs":["drizzle"]},"rules":{"gitignore":[".env","drizzle/meta/"]}}

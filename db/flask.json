@@ -1,0 +1,15 @@
+{
+  "id": "flask",
+  "name": "Flask",
+  "detect": {
+    "files": ["wsgi.py", "app.py", "application.py", "flask_app.py"],
+    "dirs": ["instance"]
+  },
+  "rules": {
+    "gitignore": [
+      "instance/", "*.pyc", "__pycache__/", ".venv/", "venv/",
+      ".env", "*.log", ".pytest_cache/", "htmlcov/", "dist/", "build/"
+    ],
+    "dockerignore": ["__pycache__/", ".venv/", "*.pyc", "instance/", ".env"]
+  }
+}

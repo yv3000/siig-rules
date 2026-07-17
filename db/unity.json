@@ -1,0 +1,18 @@
+{
+  "id": "unity",
+  "name": "Unity",
+  "detect": {
+    "files": ["ProjectSettings/ProjectSettings.asset", "ProjectVersion.txt"],
+    "dirs": ["Assets", "ProjectSettings", "Library"]
+  },
+  "rules": {
+    "gitignore": [
+      "Library/", "Temp/", "Obj/", "Build/", "Builds/", "Logs/",
+      "UserSettings/", "MemoryCaptures/", "RecordedPlaymode/",
+      "Recordings/", "*.pidb.meta", "*.pdb.meta", "*.mdb.meta",
+      "sysinfo.txt", "ExportedObj/", ".vs/", "*.csproj", "*.unityproj",
+      "*.sln", "*.suo", "*.tmp", "*.user", "*.userprefs", "crashlytics-build.properties"
+    ],
+    "vscode": { "files.exclude": { "Library": true, "Temp": true, "Obj": true } }
+  }
+}

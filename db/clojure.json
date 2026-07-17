@@ -1,0 +1,16 @@
+{
+  "id": "clojure",
+  "name": "Clojure",
+  "detect": {
+    "files": ["project.clj", "deps.edn", "shadow-cljs.edn", "*.clj", "*.cljs", "*.cljc"],
+    "dirs": [".clj-kondo", ".cpcache"]
+  },
+  "rules": {
+    "gitignore": [
+      "target/", ".cpcache/", ".clj-kondo/.cache/", ".lsp/",
+      "pom.xml", "*.class", "*.jar", "/lib/", "/classes/",
+      "/checkouts/", ".lein-deps-sum", ".lein-repl-history",
+      ".lein-plugins/", ".lein-failures", ".nrepl-port"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "angular",
+  "name": "Angular",
+  "detect": {
+    "files": ["angular.json", ".angular-cli.json", "ng-package.json"],
+    "dirs": [".angular"]
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/", "dist/", ".angular/", "*.log",
+      ".env", ".env.*", "*.js.map", "coverage/"
+    ],
+    "dockerignore": ["node_modules/", "dist/", ".angular/"],
+    "vscode": { "files.exclude": { ".angular": true } }
+  }
+}

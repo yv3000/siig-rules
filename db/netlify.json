@@ -1,0 +1,1 @@
+{"id":"netlify","name":"Netlify","detect":{"files":["netlify.toml",".netlify"],"dirs":[".netlify"]},"rules":{"gitignore":[".netlify/","node_modules/",".env",".env.*"]}}

@@ -1,0 +1,15 @@
+{
+  "id": "testing",
+  "name": "Testing (Jest / Vitest / Cypress)",
+  "detect": {
+    "files": ["jest.config.js", "jest.config.ts", "vitest.config.ts", "cypress.config.js", "cypress.config.ts", "playwright.config.ts"],
+    "dirs": ["coverage", "cypress", ".nyc_output"]
+  },
+  "rules": {
+    "gitignore": [
+      "coverage/", ".nyc_output/", "cypress/screenshots/",
+      "cypress/videos/", "test-results/", "playwright-report/",
+      ".cache/", "junit.xml"
+    ]
+  }
+}

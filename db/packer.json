@@ -1,0 +1,1 @@
+{"id":"packer","name":"Packer","detect":{"files":["*.pkr.hcl","*.pkr.json","packer.json"],"dirs":["packer_cache"]},"rules":{"gitignore":["packer_cache/","*.box","crash.log","*.lock.hcl"]}}

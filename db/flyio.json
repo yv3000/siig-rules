@@ -1,0 +1,1 @@
+{"id":"flyio","name":"Fly.io","detect":{"files":["fly.toml"],"dirs":[]},"rules":{"gitignore":[".env",".env.*","node_modules/"]}}

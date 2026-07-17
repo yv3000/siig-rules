@@ -1,0 +1,21 @@
+{
+  "id": "docker",
+  "name": "Docker",
+  "detect": {
+    "files": ["Dockerfile", "docker-compose.yml", "docker-compose.yaml", ".dockerignore"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      ".env",
+      "docker-compose.override.yml"
+    ],
+    "dockerignore": [
+      ".git",
+      ".gitignore",
+      "README.md",
+      ".env",
+      "docker-compose.override.yml"
+    ]
+  }
+}

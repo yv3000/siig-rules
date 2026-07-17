@@ -1,0 +1,16 @@
+{
+  "id": "terraform",
+  "name": "Terraform",
+  "detect": {
+    "files": ["main.tf", "variables.tf", "outputs.tf", "terraform.tfvars", "*.tf", "*.tfvars"],
+    "dirs": [".terraform"]
+  },
+  "rules": {
+    "gitignore": [
+      ".terraform/", "*.tfstate", "*.tfstate.*", "crash.log",
+      "crash.*.log", "*.tfvars", "*.tfvars.json",
+      "override.tf", "override.tf.json", "*_override.tf",
+      "*_override.tf.json", ".terraformrc", "terraform.rc"
+    ]
+  }
+}

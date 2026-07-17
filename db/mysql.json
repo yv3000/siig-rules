@@ -1,0 +1,1 @@
+{"id":"mysql","name":"MySQL","detect":{"files":["my.cnf","my.ini","*.sql","schema.sql"],"dirs":[]},"rules":{"gitignore":["*.dump","*.sql.bak","*.log",".env","data/"]}}

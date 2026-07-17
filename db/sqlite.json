@@ -1,0 +1,1 @@
+{"id":"sqlite","name":"SQLite","detect":{"files":["*.db","*.sqlite","*.sqlite3"],"dirs":[]},"rules":{"gitignore":["*.db","*.sqlite","*.sqlite3","*.db-shm","*.db-wal"]}}

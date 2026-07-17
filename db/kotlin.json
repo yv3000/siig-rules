@@ -1,0 +1,26 @@
+{
+  "id": "kotlin",
+  "name": "Kotlin",
+  "detect": {
+    "files": ["build.gradle.kts", "settings.gradle.kts"],
+    "dirs": [".gradle"]
+  },
+  "rules": {
+    "gitignore": [
+      ".gradle/",
+      "build/",
+      "*.class",
+      "*.jar",
+      "*.war",
+      ".idea/",
+      "*.iml",
+      "out/",
+      "local.properties"
+    ],
+    "dockerignore": [
+      "build/",
+      ".gradle/",
+      ".idea/"
+    ]
+  }
+}

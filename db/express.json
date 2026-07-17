@@ -1,0 +1,15 @@
+{
+  "id": "express",
+  "name": "Express.js",
+  "detect": {
+    "files": ["server.js", "server.ts", "app.js", "app.ts", "index.js", "index.ts"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/", "dist/", ".env", ".env.*",
+      "*.log", ".DS_Store", "uploads/", "tmp/"
+    ],
+    "dockerignore": ["node_modules/", "dist/", ".env", "uploads/"]
+  }
+}

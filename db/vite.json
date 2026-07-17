@@ -1,0 +1,14 @@
+{
+  "id": "vite",
+  "name": "Vite",
+  "detect": {
+    "files": ["vite.config.js", "vite.config.ts", "vite.config.mjs"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/", "dist/", ".env", ".env.*",
+      "!.env.example", "*.local", "*.log"
+    ]
+  }
+}

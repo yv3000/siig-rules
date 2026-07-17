@@ -1,0 +1,1 @@
+{"id":"capacitor","name":"Capacitor (Ionic)","detect":{"files":["capacitor.config.ts","capacitor.config.json","ionic.config.json"],"dirs":[]},"rules":{"gitignore":["node_modules/","dist/","android/","ios/",".env","*.log","www/"]}}

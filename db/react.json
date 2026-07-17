@@ -1,0 +1,26 @@
+{
+  "id": "react",
+  "name": "React",
+  "detect": {
+    "files": ["vite.config.ts", "vite.config.js"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "dist/",
+      "build/",
+      ".env.local",
+      ".env.*.local",
+      "*.tsbuildinfo"
+    ],
+    "vercelignore": [
+      "node_modules/",
+      ".env"
+    ],
+    "dockerignore": [
+      "node_modules/",
+      "dist/",
+      ".env"
+    ]
+  }
+}

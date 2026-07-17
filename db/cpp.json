@@ -1,0 +1,19 @@
+{
+  "id": "cpp",
+  "name": "C++",
+  "detect": {
+    "files": ["*.cpp", "*.cc", "*.cxx", "*.hpp", "CMakeLists.txt", "conanfile.txt", "conanfile.py", "vcpkg.json"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "*.o", "*.a", "*.so", "*.out", "*.exe", "*.dll", "*.dylib",
+      "build/", "dist/", "CMakeCache.txt", "CMakeFiles/",
+      "cmake_install.cmake", "*.d", "*.i", "*.s",
+      "compile_commands.json", ".clangd/", ".ccls-cache/",
+      "conan/", ".conan/", "vcpkg_installed/"
+    ],
+    "dockerignore": ["build/", "*.o", "*.a", "vcpkg_installed/"],
+    "vscode": { "files.exclude": { "build": true, "CMakeFiles": true } }
+  }
+}

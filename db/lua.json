@@ -1,0 +1,14 @@
+{
+  "id": "lua",
+  "name": "Lua",
+  "detect": {
+    "files": ["*.lua", "rockspec", "*.rockspec", ".luarc.json", ".luacheckrc"],
+    "dirs": ["lua_modules"]
+  },
+  "rules": {
+    "gitignore": [
+      "lua_modules/", "*.luac", "luac.out", ".luarocks/",
+      "lua_modules/", "/lib/luarocks/rocks*/", "*.rock"
+    ]
+  }
+}

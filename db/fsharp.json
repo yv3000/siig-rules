@@ -1,0 +1,16 @@
+{
+  "id": "fsharp",
+  "name": "F#",
+  "detect": {
+    "files": ["*.fsproj", "*.fs", "*.fsi", "*.fsx"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "bin/", "obj/", ".vs/", "*.user", "*.suo",
+      ".ionide/", "packages/", "paket-files/", ".paket/",
+      "*.nupkg", "TestResult.xml"
+    ],
+    "vscode": { "files.exclude": { "bin": true, "obj": true } }
+  }
+}

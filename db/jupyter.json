@@ -1,0 +1,15 @@
+{
+  "id": "jupyter",
+  "name": "Jupyter / Data Science",
+  "detect": {
+    "files": ["*.ipynb", "environment.yml", "conda-requirements.txt", ".condarc"],
+    "dirs": [".ipynb_checkpoints"]
+  },
+  "rules": {
+    "gitignore": [
+      ".ipynb_checkpoints/", "*.pyc", "__pycache__/", ".venv/",
+      "venv/", ".env", "data/raw/", "data/interim/", "data/processed/",
+      "models/", "reports/figures/", "*.h5", "*.pkl", "*.model"
+    ]
+  }
+}

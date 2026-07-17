@@ -1,0 +1,15 @@
+{
+  "id": "symfony",
+  "name": "Symfony",
+  "detect": {
+    "files": ["symfony.lock", "composer.json"],
+    "dirs": ["var", "vendor"]
+  },
+  "rules": {
+    "gitignore": [
+      "vendor/", "var/", "node_modules/", ".env.local",
+      ".env.local.php", ".env.*.local", "config/secrets/prod/prod.decrypt.private.php",
+      "public/bundles/", ".phpunit.result.cache", "phpunit.xml"
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "id": "zig",
+  "name": "Zig",
+  "detect": {
+    "files": ["build.zig", "build.zig.zon", "*.zig"],
+    "dirs": ["zig-cache", "zig-out"]
+  },
+  "rules": {
+    "gitignore": [
+      "zig-cache/", "zig-out/", ".zig-cache/"
+    ],
+    "vscode": { "files.exclude": { "zig-cache": true, "zig-out": true } }
+  }
+}

@@ -1,0 +1,1 @@
+{"id":"qwik","name":"Qwik","detect":{"files":["qwik.config.ts","vite.config.ts"],"dirs":[".qwik"]},"rules":{"gitignore":["node_modules/","dist/",".qwik/",".env","*.log"]}}

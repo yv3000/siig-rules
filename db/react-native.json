@@ -1,0 +1,16 @@
+{
+  "id": "react-native",
+  "name": "React Native",
+  "detect": {
+    "files": ["metro.config.js", "metro.config.ts", "react-native.config.js"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/", "android/app/build/", "ios/build/",
+      "ios/Pods/", "*.jks", "*.p8", "*.p12", "*.key",
+      "*.mobileprovision", ".buckd/", "buck-out/",
+      ".env", ".env.*", "*.log", ".DS_Store"
+    ]
+  }
+}

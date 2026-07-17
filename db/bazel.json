@@ -1,0 +1,14 @@
+{
+  "id": "bazel",
+  "name": "Bazel",
+  "detect": {
+    "files": ["WORKSPACE", "WORKSPACE.bazel", "BUILD", "BUILD.bazel", ".bazelrc", ".bazelversion"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "bazel-*", "/bazel-bin", "/bazel-out", "/bazel-testlogs",
+      "/bazel-workspace", "*.runfiles", "user.bazelrc"
+    ]
+  }
+}

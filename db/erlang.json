@@ -1,0 +1,15 @@
+{
+  "id": "erlang",
+  "name": "Erlang",
+  "detect": {
+    "files": ["rebar.config", "rebar.lock", "erlang.mk", "*.erl", "*.hrl"],
+    "dirs": ["_build", "deps", "ebin"]
+  },
+  "rules": {
+    "gitignore": [
+      "_build/", "deps/", "ebin/", "*.beam", "*.plt",
+      "erl_crash.dump", ".rebar3/", "rebar3.crashdump"
+    ],
+    "vscode": { "files.exclude": { "_build": true, "ebin": true } }
+  }
+}

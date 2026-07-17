@@ -1,0 +1,14 @@
+{
+  "id": "aws-cdk",
+  "name": "AWS CDK",
+  "detect": {
+    "files": ["cdk.json", "cdk.context.json"],
+    "dirs": ["cdk.out"]
+  },
+  "rules": {
+    "gitignore": [
+      "cdk.out/", "cdk.context.json", "node_modules/",
+      "dist/", "build/", ".env", "*.js.map"
+    ]
+  }
+}

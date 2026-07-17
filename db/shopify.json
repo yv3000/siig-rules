@@ -1,0 +1,14 @@
+{
+  "id": "shopify",
+  "name": "Shopify Theme",
+  "detect": {
+    "files": ["shopify.app.toml", "shopify.theme.toml", "theme.liquid", ".shopifyignore"],
+    "dirs": ["sections", "snippets", "templates", "layout"]
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/", ".env", "config/settings_data.json",
+      "*.log", ".DS_Store"
+    ]
+  }
+}

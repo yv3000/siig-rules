@@ -1,0 +1,1 @@
+{"id":"yarn","name":"Yarn","detect":{"files":[".yarnrc","yarn.lock",".yarnrc.yml"],"dirs":[".yarn"]},"rules":{"gitignore":[".yarn/cache/",".yarn/unplugged/",".yarn/build-state.yml",".yarn/install-state.gz",".pnp.cjs",".pnp.loader.mjs","node_modules/",".env"]}}

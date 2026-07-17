@@ -1,0 +1,15 @@
+{
+  "id": "elixir",
+  "name": "Elixir",
+  "detect": {
+    "files": ["mix.exs", "mix.lock", "*.ex", "*.exs"],
+    "dirs": ["_build", "deps"]
+  },
+  "rules": {
+    "gitignore": [
+      "_build/", "deps/", ".fetch/", "erl_crash.dump",
+      "*.ez", "*.beam", "/config/*.secret.exs", ".elixir_ls/"
+    ],
+    "vscode": { "files.exclude": { "_build": true, "deps": true } }
+  }
+}

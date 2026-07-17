@@ -1,0 +1,30 @@
+{
+  "id": "android",
+  "name": "Android",
+  "detect": {
+    "files": ["AndroidManifest.xml", "build.gradle", "settings.gradle"],
+    "dirs": [".gradle", ".idea"]
+  },
+  "rules": {
+    "gitignore": [
+      "*.iml",
+      ".gradle/",
+      "/local.properties",
+      "/.idea/",
+      ".DS_Store",
+      "/build/",
+      "/captures",
+      ".externalNativeBuild/",
+      ".cxx/",
+      "*.apk",
+      "*.ap_",
+      "*.aab",
+      "google-services.json"
+    ],
+    "dockerignore": [
+      ".gradle/",
+      "build/",
+      ".idea/"
+    ]
+  }
+}

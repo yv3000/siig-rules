@@ -1,0 +1,17 @@
+{
+  "id": "haskell",
+  "name": "Haskell",
+  "detect": {
+    "files": ["*.hs", "*.cabal", "stack.yaml", "stack.yaml.lock", "cabal.project"],
+    "dirs": [".stack-work"]
+  },
+  "rules": {
+    "gitignore": [
+      "dist/", "dist-newstyle/", ".stack-work/", "*.o", "*.hi",
+      "*.dyn_o", "*.dyn_hi", ".hsenv/", ".cabal-sandbox/",
+      "cabal.sandbox.config", "*.prof", "*.hp", "*.eventlog",
+      ".HTF/", ".ghc.environment.*", "result"
+    ],
+    "vscode": { "files.exclude": { "dist-newstyle": true, ".stack-work": true } }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "vue",
+  "name": "Vue.js",
+  "detect": {
+    "files": ["vue.config.js", "vue.config.ts", "vite.config.ts", "vite.config.js", "*.vue", "nuxt.config.ts", "nuxt.config.js"],
+    "dirs": [".nuxt", ".output"]
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/", "dist/", ".nuxt/", ".output/", ".nitro/",
+      ".cache/", ".env", ".env.*", "*.log", ".DS_Store"
+    ],
+    "vercelignore": ["node_modules/", ".nuxt/", ".env"],
+    "dockerignore": ["node_modules/", ".nuxt/", ".env"]
+  }
+}

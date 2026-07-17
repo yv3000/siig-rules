@@ -1,0 +1,13 @@
+{
+  "id": "storybook",
+  "name": "Storybook",
+  "detect": {
+    "files": [".storybook/main.js", ".storybook/main.ts"],
+    "dirs": [".storybook", "storybook-static"]
+  },
+  "rules": {
+    "gitignore": [
+      "storybook-static/", "node_modules/", ".env"
+    ]
+  }
+}

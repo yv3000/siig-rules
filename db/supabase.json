@@ -1,0 +1,19 @@
+{
+  "id": "supabase",
+  "name": "Supabase",
+  "detect": {
+    "files": ["supabase/config.toml"],
+    "dirs": ["supabase"]
+  },
+  "rules": {
+    "gitignore": [
+      "supabase/.branches",
+      "supabase/.temp/",
+      ".env",
+      ".env.local"
+    ],
+    "dockerignore": [
+      "supabase/.temp/"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "java",
+  "name": "Java",
+  "detect": {
+    "files": ["pom.xml", "build.gradle", "gradlew"],
+    "dirs": [".gradle", ".mvn"]
+  },
+  "rules": {
+    "gitignore": [
+      "target/",
+      "*.class",
+      "*.log",
+      "*.jar",
+      "*.war",
+      "*.nar",
+      "*.ear",
+      "*.zip",
+      "*.tar.gz",
+      "*.rar",
+      ".gradle/",
+      "build/",
+      ".idea/",
+      "*.iml",
+      "out/",
+      ".settings/",
+      ".project",
+      ".classpath",
+      "hs_err_pid*"
+    ],
+    "dockerignore": [
+      "target/",
+      "build/",
+      ".gradle/",
+      ".idea/"
+    ]
+  }
+}

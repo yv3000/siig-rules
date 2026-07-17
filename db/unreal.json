@@ -1,0 +1,17 @@
+{
+  "id": "unreal",
+  "name": "Unreal Engine",
+  "detect": {
+    "files": ["*.uproject", "*.uplugin"],
+    "dirs": ["Content", "Config"]
+  },
+  "rules": {
+    "gitignore": [
+      "Binaries/", "Build/", "DerivedDataCache/", "Intermediate/",
+      "Saved/", "*.VC.db", "*.opensdf", "*.opendb",
+      "*.sdf", "*.sln", "*.suo", "*.xcodeproj", "*.xcworkspace",
+      "*.pri", "ArchivedBuilds/", "BuildGraph/", "Coverage/"
+    ],
+    "vscode": { "files.exclude": { "Binaries": true, "Intermediate": true, "Saved": true } }
+  }
+}

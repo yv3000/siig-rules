@@ -1,0 +1,15 @@
+{
+  "id": "gradle",
+  "name": "Gradle",
+  "detect": {
+    "files": ["build.gradle", "build.gradle.kts", "gradlew", "gradle.properties", "settings.gradle"],
+    "dirs": [".gradle"]
+  },
+  "rules": {
+    "gitignore": [
+      ".gradle/", "build/", "out/", "*.class", "*.jar", "*.war",
+      "local.properties", ".idea/", "*.iml", "gradle-wrapper.jar"
+    ],
+    "dockerignore": ["build/", ".gradle/", "*.class"]
+  }
+}

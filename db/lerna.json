@@ -1,0 +1,1 @@
+{"id":"lerna","name":"Lerna Monorepo","detect":{"files":["lerna.json"],"dirs":[]},"rules":{"gitignore":["node_modules/","dist/","build/",".env","*.log"]}}

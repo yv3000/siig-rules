@@ -1,0 +1,14 @@
+{
+  "id": "deno",
+  "name": "Deno",
+  "detect": {
+    "files": ["deno.json", "deno.jsonc", "deno.lock", "import_map.json"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      ".env", ".env.*", "!.env.example", "*.log",
+      "coverage/", "dist/", "deno.lock"
+    ]
+  }
+}

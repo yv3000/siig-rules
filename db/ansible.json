@@ -1,0 +1,15 @@
+{
+  "id": "ansible",
+  "name": "Ansible",
+  "detect": {
+    "files": ["ansible.cfg", "site.yml", "playbook.yml", "requirements.yml", "hosts", "inventory"],
+    "dirs": ["roles", "group_vars", "host_vars"]
+  },
+  "rules": {
+    "gitignore": [
+      "*.retry", ".vault_pass", "vault_password_file",
+      "group_vars/all/vault.yml", "host_vars/*/vault.yml",
+      "*.secret", ".cache/", "*.log"
+    ]
+  }
+}

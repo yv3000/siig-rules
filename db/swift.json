@@ -1,0 +1,17 @@
+{
+  "id": "swift",
+  "name": "Swift",
+  "detect": {
+    "files": ["*.swift", "Package.swift", "Podfile", "*.xcodeproj", "*.xcworkspace"],
+    "dirs": [".build", "DerivedData"]
+  },
+  "rules": {
+    "gitignore": [
+      ".build/", "build/", "DerivedData/", "*.pbxuser", "!default.pbxuser",
+      "xcuserdata/", "*.xcuserstate", "*.xccheckout", "*.moved-aside",
+      "Pods/", ".swiftpm/", "*.ipa", "*.dSYM.zip", "*.dSYM",
+      "Package.resolved"
+    ],
+    "vscode": { "files.exclude": { ".build": true, "DerivedData": true } }
+  }
+}

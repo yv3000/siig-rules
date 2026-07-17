@@ -1,0 +1,15 @@
+{
+  "id": "expo",
+  "name": "Expo (React Native)",
+  "detect": {
+    "files": ["app.json", "app.config.js", "app.config.ts", "expo-env.d.ts", "eas.json"],
+    "dirs": [".expo"]
+  },
+  "rules": {
+    "gitignore": [
+      "node_modules/", ".expo/", "dist/", "web-build/", "*.jks",
+      "*.p8", "*.p12", "*.key", "*.mobileprovision", "*.orig.*",
+      ".env", ".env.*", "ios/", "android/"
+    ]
+  }
+}

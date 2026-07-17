@@ -1,0 +1,26 @@
+{
+  "id": "go",
+  "name": "Go",
+  "detect": {
+    "files": ["go.mod", "go.sum"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "bin/",
+      "*.exe",
+      "*.exe~",
+      "*.dll",
+      "*.so",
+      "*.dylib",
+      "*.test",
+      "*.out",
+      "vendor/",
+      ".env"
+    ],
+    "dockerignore": [
+      "vendor/",
+      ".env"
+    ]
+  }
+}

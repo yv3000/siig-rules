@@ -1,0 +1,1 @@
+{"id":"redis","name":"Redis","detect":{"files":["redis.conf","redis.windows.conf","dump.rdb"],"dirs":[]},"rules":{"gitignore":["dump.rdb","appendonly.aof","*.log","redis.log"]}}

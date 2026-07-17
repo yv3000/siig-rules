@@ -1,0 +1,14 @@
+{
+  "id": "gatsby",
+  "name": "Gatsby",
+  "detect": {
+    "files": ["gatsby-config.js", "gatsby-config.ts", "gatsby-node.js"],
+    "dirs": [".cache", "public"]
+  },
+  "rules": {
+    "gitignore": [
+      ".cache/", "public/", "node_modules/", ".env",
+      ".env.development", ".env.production", "*.log"
+    ]
+  }
+}

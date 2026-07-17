@@ -1,0 +1,1 @@
+{"id":"nginx","name":"Nginx","detect":{"files":["nginx.conf","nginx.conf.template"],"dirs":["sites-enabled","sites-available"]},"rules":{"gitignore":["*.pid","logs/","access.log","error.log","*.key","*.crt","*.pem"]}}

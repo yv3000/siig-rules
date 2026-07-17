@@ -1,0 +1,17 @@
+{
+  "id": "laravel",
+  "name": "Laravel",
+  "detect": {
+    "files": ["artisan", "composer.json", "composer.lock"],
+    "dirs": ["storage", "bootstrap/cache"]
+  },
+  "rules": {
+    "gitignore": [
+      "vendor/", "node_modules/", ".env", ".env.backup",
+      "storage/app/", "storage/framework/cache/", "storage/logs/",
+      "bootstrap/cache/", "public/hot", "public/storage",
+      "*.key", "Homestead.yaml", "Homestead.json", ".vagrant/", ".phpunit.result.cache"
+    ],
+    "dockerignore": ["vendor/", "node_modules/", ".env", "storage/logs/"]
+  }
+}

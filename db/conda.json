@@ -1,0 +1,13 @@
+{
+  "id": "conda",
+  "name": "Conda",
+  "detect": {
+    "files": ["environment.yml", "environment.yaml", "conda.yml", ".condarc"],
+    "dirs": ["envs"]
+  },
+  "rules": {
+    "gitignore": [
+      "envs/", "pkgs/", "*.conda", "*.tar.bz2", ".conda/"
+    ]
+  }
+}

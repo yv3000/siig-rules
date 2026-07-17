@@ -1,0 +1,13 @@
+{
+  "id": "stripe",
+  "name": "Stripe Integration",
+  "detect": {
+    "files": ["stripe.config.js", "stripe.config.ts", ".stripe/"],
+    "dirs": [".stripe"]
+  },
+  "rules": {
+    "gitignore": [
+      ".env", "*.stripe.key", "webhook-secret.txt"
+    ]
+  }
+}

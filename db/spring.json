@@ -1,0 +1,17 @@
+{
+  "id": "spring",
+  "name": "Spring Boot",
+  "detect": {
+    "files": ["pom.xml", "build.gradle", "application.properties", "application.yml", "application.yaml"],
+    "dirs": [".mvn"]
+  },
+  "rules": {
+    "gitignore": [
+      "target/", "build/", "*.class", "*.jar", "*.war", "*.ear",
+      ".mvn/", ".gradle/", "*.log", "*.log.*",
+      "application-local.properties", "application-local.yml",
+      ".idea/", "*.iml", "HELP.md"
+    ],
+    "dockerignore": ["target/", "*.class", ".mvn/"]
+  }
+}

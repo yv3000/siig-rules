@@ -1,0 +1,14 @@
+{
+  "id": "pulumi",
+  "name": "Pulumi",
+  "detect": {
+    "files": ["Pulumi.yaml", "Pulumi.yml", "Pulumi.*.yaml"],
+    "dirs": [".pulumi"]
+  },
+  "rules": {
+    "gitignore": [
+      ".pulumi/", "Pulumi.*.yaml", "!Pulumi.yaml",
+      "node_modules/", "__pycache__/", ".venv/"
+    ]
+  }
+}

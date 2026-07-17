@@ -1,0 +1,15 @@
+{
+  "id": "godot",
+  "name": "Godot",
+  "detect": {
+    "files": ["project.godot", "*.gdscript", "*.gd", "export_presets.cfg"],
+    "dirs": [".godot"]
+  },
+  "rules": {
+    "gitignore": [
+      ".godot/", "*.translation", "export.cfg",
+      "export_presets.cfg", ".import/", "android/", "ios/",
+      "html5/", "linux/", "macos/", "osx/", "windows/"
+    ]
+  }
+}

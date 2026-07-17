@@ -1,0 +1,17 @@
+{
+  "id": "ios",
+  "name": "iOS / Xcode",
+  "detect": {
+    "files": ["*.xcodeproj", "*.xcworkspace", "Info.plist"],
+    "dirs": ["DerivedData", "Pods"]
+  },
+  "rules": {
+    "gitignore": [
+      "build/", "DerivedData/", "*.pbxuser", "!default.pbxuser",
+      "xcuserdata/", "*.xcuserstate", "*.xccheckout",
+      "Pods/", ".build/", "*.ipa", "*.dSYM.zip", "*.dSYM",
+      "fastlane/report.xml", "fastlane/Preview.html",
+      "fastlane/screenshots/**/*.png", "fastlane/test_output"
+    ]
+  }
+}

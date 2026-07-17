@@ -1,0 +1,15 @@
+{
+  "id": "fastapi",
+  "name": "FastAPI",
+  "detect": {
+    "files": ["main.py", "app.py"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "*.pyc", "__pycache__/", ".venv/", "venv/", ".env",
+      "*.log", ".pytest_cache/", ".mypy_cache/", "htmlcov/"
+    ],
+    "dockerignore": ["__pycache__/", ".venv/", "*.pyc", ".env"]
+  }
+}

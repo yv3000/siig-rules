@@ -1,0 +1,30 @@
+{
+  "id": "dotnet",
+  "name": ".NET / C#",
+  "detect": {
+    "files": ["*.csproj", "*.sln", "*.fsproj"],
+    "dirs": ["bin", "obj"]
+  },
+  "rules": {
+    "gitignore": [
+      "bin/",
+      "obj/",
+      "*.user",
+      "*.suo",
+      "*.userosscache",
+      "*.sln.docstates",
+      ".vs/",
+      "packages/",
+      "*.nupkg",
+      "project.lock.json",
+      "*.nuget.props",
+      "*.nuget.targets"
+    ],
+    "dockerignore": [
+      "bin/",
+      "obj/",
+      ".vs/",
+      "packages/"
+    ]
+  }
+}

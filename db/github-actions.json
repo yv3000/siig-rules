@@ -1,0 +1,13 @@
+{
+  "id": "github-actions",
+  "name": "GitHub Actions",
+  "detect": {
+    "files": [],
+    "dirs": [".github/workflows"]
+  },
+  "rules": {
+    "gitignore": [
+      "act/", ".act-events.json"
+    ]
+  }
+}

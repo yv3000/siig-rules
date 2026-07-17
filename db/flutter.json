@@ -1,0 +1,28 @@
+{
+  "id": "flutter",
+  "name": "Flutter",
+  "detect": {
+    "files": ["pubspec.yaml", "pubspec.lock"],
+    "dirs": [".dart_tool", ".flutter-plugins"]
+  },
+  "rules": {
+    "gitignore": [
+      ".dart_tool/",
+      ".flutter-plugins",
+      ".flutter-plugins-dependencies",
+      ".packages",
+      "build/",
+      "*.iml",
+      ".idea/",
+      "*.lock",
+      ".metadata",
+      "android/app/debug",
+      "android/app/profile",
+      "android/app/release"
+    ],
+    "dockerignore": [
+      "build/",
+      ".dart_tool/"
+    ]
+  }
+}

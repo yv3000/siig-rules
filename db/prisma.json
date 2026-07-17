@@ -1,0 +1,13 @@
+{
+  "id": "prisma",
+  "name": "Prisma",
+  "detect": {
+    "files": ["prisma/schema.prisma", "schema.prisma"],
+    "dirs": ["prisma"]
+  },
+  "rules": {
+    "gitignore": [
+      ".env", "prisma/migrations/", "generated/"
+    ]
+  }
+}

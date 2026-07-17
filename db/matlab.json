@@ -1,0 +1,14 @@
+{
+  "id": "matlab",
+  "name": "MATLAB",
+  "detect": {
+    "files": ["*.m", "*.mat", "*.fig", "*.mlx", "*.mlapp", "*.mltbx", "*.mlpkginstall"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "*.asv", "*.m~", "autosave/", "*.mex*", "octave-workspace",
+      "*.slxc", "slprj/", "sccprj/", "codegen/", "*.elf", "*.prj"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "firebase",
+  "name": "Firebase",
+  "detect": {
+    "files": ["firebase.json", ".firebaserc"],
+    "dirs": [".firebase"]
+  },
+  "rules": {
+    "gitignore": [
+      ".firebase/",
+      "*-debug.log",
+      "firebase-debug.log",
+      ".runtimeconfig.json",
+      "ui-debug.log",
+      "firestore-debug.log",
+      "database-debug.log",
+      "storage-debug.log"
+    ],
+    "dockerignore": [
+      ".firebase/"
+    ]
+  }
+}

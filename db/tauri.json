@@ -1,0 +1,18 @@
+{
+  "id": "tauri",
+  "name": "Tauri",
+  "detect": {
+    "files": ["src-tauri/tauri.conf.json", "src-tauri/Cargo.toml"],
+    "dirs": ["src-tauri"]
+  },
+  "rules": {
+    "gitignore": [
+      "src-tauri/target/",
+      "src-tauri/WixTools/",
+      "src-tauri/Frameworks/"
+    ],
+    "dockerignore": [
+      "src-tauri/target/"
+    ]
+  }
+}

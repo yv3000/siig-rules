@@ -1,0 +1,1 @@
+{"id":"wails","name":"Wails (Go Desktop)","detect":{"files":["wails.json"],"dirs":["frontend"]},"rules":{"gitignore":["build/bin/","frontend/node_modules/","frontend/dist/",".env"]}}

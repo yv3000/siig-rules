@@ -1,0 +1,1 @@
+{"id":"vagrant","name":"Vagrant","detect":{"files":["Vagrantfile"],"dirs":[".vagrant"]},"rules":{"gitignore":[".vagrant/","*.box","*.log"]}}

@@ -1,0 +1,24 @@
+{
+  "id": "rust",
+  "name": "Rust",
+  "detect": {
+    "files": ["Cargo.toml", "Cargo.lock"],
+    "dirs": ["target"]
+  },
+  "rules": {
+    "gitignore": [
+      "target/",
+      "Cargo.lock",
+      "**/*.rs.bk",
+      "*.pdb"
+    ],
+    "dockerignore": [
+      "target/"
+    ],
+    "vscode": {
+      "files.exclude": {
+        "target": true
+      }
+    }
+  }
+}
