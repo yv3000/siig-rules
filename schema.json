@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/yv3000/siig-rules/blob/main/schema.json",
+  "title": "SIIG stack rules",
+  "description": "Schema for rule files in db/. The reserved global rule is the only file allowed to use a null detect value.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "name", "detect", "rules"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+      "description": "Lowercase stack identifier. Hyphens are allowed; spaces are not."
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Human-readable stack name."
+    },
+    "detect": {
+      "description": "Files and directories used to detect the stack. The reserved global rule uses null.",
+      "oneOf": [
+        { "$ref": "#/$defs/detect" },
+        { "type": "null" }
+      ]
+    },
+    "rules": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "gitignore": { "$ref": "#/$defs/stringArray" },
+        "vercelignore": { "$ref": "#/$defs/stringArray" },
+        "dockerignore": { "$ref": "#/$defs/stringArray" },
+        "npmignore": { "$ref": "#/$defs/stringArray" },
+        "vscode": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["files.exclude"],
+          "properties": {
+            "files.exclude": {
+              "type": "object",
+              "description": "Map of VS Code file-exclusion patterns to booleans.",
+              "additionalProperties": { "type": "boolean" }
+            }
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "detect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["files", "dirs"],
+      "properties": {
+        "files": { "$ref": "#/$defs/stringArray" },
+        "dirs": { "$ref": "#/$defs/stringArray" }
+      }
+    },
+    "stringArray": {
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": { "id": { "const": "global" } },
+        "required": ["id"]
+      },
+      "then": {
+        "properties": { "detect": { "type": "null" } }
+      },
+      "else": {
+        "properties": { "detect": { "$ref": "#/$defs/detect" } }
+      }
+    }
+  ]
+}
