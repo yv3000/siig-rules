@@ -1,0 +1,18 @@
+{
+  "id": "coq",
+  "name": "Coq",
+  "detect": {
+    "files": ["_CoqProject", "coq-project.toml"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "*.vo",
+      "*.vok",
+      "*.vos",
+      "*.glob",
+      ".aux/",
+      "*.aux"
+    ]
+  }
+}
