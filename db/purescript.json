@@ -1,0 +1,21 @@
+{
+  "id": "purescript",
+  "name": "PureScript",
+  "detect": {
+    "files": ["spago.dhall", "packages.dhall"],
+    "dirs": [".spago"]
+  },
+  "rules": {
+    "gitignore": [
+      "output/",
+      ".spago/",
+      ".psa/",
+      ".purs-repl"
+    ],
+    "vscode": {
+      "files.exclude": {
+        ".spago": true
+      }
+    }
+  }
+}
