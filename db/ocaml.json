@@ -1,0 +1,23 @@
+{
+  "id": "ocaml",
+  "name": "OCaml / Dune",
+  "detect": {
+    "files": ["dune-project", "*.opam"],
+    "dirs": ["_opam"]
+  },
+  "rules": {
+    "gitignore": [
+      "_build/",
+      "_opam/",
+      "*.install",
+      ".merlin",
+      "dune.lock/"
+    ],
+    "vscode": {
+      "files.exclude": {
+        "_build": true,
+        "_opam": true
+      }
+    }
+  }
+}
