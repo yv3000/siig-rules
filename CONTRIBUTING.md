@@ -120,6 +120,8 @@ Your stack should appear in the "Detected Stacks" list.
 
 ❌ **Don't detect on files SIIG writes** — `.gitignore`, `.vercelignore`, `.dockerignore` and `.npmignore` are ignored as detection input when they already carry SIIG's marker, otherwise a second run would detect its own output.
 
+⚠️ **For the on-demand fetch to find your rule, one detect file must be named after the id.** SIIG builds the fetch URL from the unrecognised file's name without its extension: `gleam.toml` asks for `db/gleam.json`, `platformio.ini` asks for `db/platformio.json`. A stack whose only markers are `spago.dhall` or `dune-project` is reachable once it is embedded in a release, but not through the on-demand path — so include a `<id>.<ext>` marker file in `detect.files` where the stack has one.
+
 ---
 
 ## What happens after your PR is merged
