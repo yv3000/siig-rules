@@ -6,7 +6,7 @@
 
 <h1 align="center">siig-rules</h1>
 <p align="center"><b>Community-maintained rules database for <a href="https://github.com/yv3000/SIIG">SIIG</a>.</b></p>
-<p align="center">Every JSON file here defines one stack's detection logic and ignore rules — and gets embedded into the SIIG binary on each release.</p>
+<p align="center">Every JSON file here defines one stack's detection logic and ignore rules — and reaches SIIG users in two ways: embedded into the next release, or fetched on demand the moment it is merged.</p>
 
 ---
 
@@ -36,28 +36,38 @@ siig-rules/
 │   ├── node.json
 │   ├── python.json
 │   ├── rust.json
-│   └── ...110 stacks total
+│   └── ...122 stacks total
+├── cmd/validate/        ← checks every file in db/ against schema.json
 ├── schema.json          ← JSON Schema for validating rule files
+├── LICENSE              ← MIT
 └── CONTRIBUTING.md      ← full guide for adding new stacks
 ```
 
 ---
 
-## How it syncs with SIIG
+## Two ways a rule reaches a user
 
-When a PR is merged into this repo, the SIIG main repo automatically picks up the new rules:
+**1. Fetched on demand — immediately after merge.** When SIIG finds a file or directory that none of its embedded rules recognise, it takes the name as a stack id and requests `https://raw.githubusercontent.com/yv3000/siig-rules/main/db/<id>.json`. A hit is applied and cached in `~/.siig/cache/` for 7 days; a 404 is skipped silently. This is how a stack added here today works for users on an older SIIG binary tonight.
+
+**2. Embedded — after the sync PR lands.** The sync workflow copies `db/*.json` into [SIIG](https://github.com/yv3000/SIIG)`/rules/db/`, where it is compiled into the binary with `go:embed`, so the stack then works fully offline.
 
 ```
-PR merged into siig-rules
+rule merged into siig-rules main
         ↓
-Every Monday at 2am UTC — sync workflow runs
+        ├── SIIG fetches db/<id>.json on demand   (works right away, needs network)
         ↓
-New JSON files copied into SIIG/rules/db/
+weekly sync opens a PR against SIIG  →  CI + maintainer merge  →  tagged release
         ↓
-New SIIG release built and published automatically
-        ↓
-Users get the new stack on next update — no action needed
+rule is embedded — works offline in every future binary
 ```
+
+The sync opens a **pull request**; it never pushes to `main` or cuts a release by itself. What ships is decided by SIIG's CI and a human.
+
+---
+
+## Validating a rule
+
+`go run ./cmd/validate` checks every file in `db/` against the shape SIIG expects: filename must equal `id`, `id` must be lowercase kebab-case, `detect` is required (except for `global.json`, which must be `null`), unknown JSON fields are rejected, and entries must be non-empty, ≤256 characters and free of newlines. CI runs it on every push and pull request, because SIIG rejects at runtime anything that fails these — a rule that passes review here but breaks there would simply never apply.
 
 ---
 
@@ -71,9 +81,9 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md) for the full guide. The short version:
 
 ---
 
-## Supported stacks (110)
+## Supported stacks (122)
 
-`android` · `angular` · `ansible` · `apache` · `astro` · `aws-cdk` · `bazel` · `bun` · `c` · `capacitor` · `clojure` · `conda` · `cpp` · `csharp` · `dart` · `deno` · `django` · `docker` · `dotnet` · `drizzle` · `electron` · `elixir` · `erlang` · `expo` · `express` · `fastapi` · `firebase` · `flask` · `flutter` · `flyio` · `fsharp` · `gatsby` · `github-actions` · `global` · `go` · `godot` · `gradle` · `graphql` · `groovy` · `haskell` · `ios` · `java` · `julia` · `jupyter` · `kotlin` · `kotlin-jvm` · `kubernetes` · `laravel` · `lerna` · `lua` · `matlab` · `maven` · `mongodb` · `mysql` · `nestjs` · `netlify` · `nextjs` · `nginx` · `nix` · `node` · `nuxt` · `nx` · `objectivec` · `packer` · `perl` · `php` · `pnpm` · `postgres` · `prisma` · `pulumi` · `python` · `pytorch` · `qwik` · `r` · `railway` · `react` · `react-native` · `redis` · `remix` · `ruby` · `rust` · `scala` · `shopify` · `solid` · `spring` · `sqlite` · `storybook` · `stripe` · `supabase` · `svelte` · `swift` · `symfony` · `t3` · `tamagui` · `tauri` · `terraform` · `testing` · `trpc` · `turborepo` · `unity` · `unreal` · `vagrant` · `vercel` · `vite` · `vscode-extension` · `vue` · `wails` · `wordpress` · `yarn` · `zig`
+`android` · `angular` · `ansible` · `apache` · `astro` · `aws-cdk` · `bazel` · `bun` · `c` · `capacitor` · `clojure` · `conda` · `coq` · `cpp` · `crystal` · `csharp` · `dart` · `deno` · `django` · `dlang` · `docker` · `dotnet` · `drizzle` · `electron` · `elixir` · `erlang` · `expo` · `express` · `fastapi` · `firebase` · `flask` · `flutter` · `flyio` · `fortran` · `fsharp` · `gatsby` · `github-actions` · `gleam` · `global` · `go` · `godot` · `gradle` · `graphql` · `groovy` · `haskell` · `ios` · `java` · `julia` · `jupyter` · `kotlin` · `kotlin-jvm` · `kubernetes` · `laravel` · `latex` · `lean` · `lerna` · `lua` · `matlab` · `maven` · `mongodb` · `mysql` · `nestjs` · `netlify` · `nextjs` · `nginx` · `nim` · `nix` · `node` · `nuxt` · `nx` · `objectivec` · `ocaml` · `packer` · `perl` · `php` · `platformio` · `pnpm` · `postgres` · `prisma` · `pulumi` · `purescript` · `python` · `pytorch` · `qwik` · `r` · `railway` · `react` · `react-native` · `redis` · `remix` · `ruby` · `rust` · `scala` · `shopify` · `solid` · `solidity` · `spring` · `sqlite` · `storybook` · `stripe` · `supabase` · `svelte` · `swift` · `symfony` · `t3` · `tamagui` · `tauri` · `terraform` · `testing` · `trpc` · `turborepo` · `unity` · `unreal` · `vagrant` · `vercel` · `vite` · `vscode-extension` · `vue` · `wails` · `wordpress` · `yarn` · `zig`
 
 ---
 

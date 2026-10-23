@@ -1,0 +1,22 @@
+{
+  "id": "crystal",
+  "name": "Crystal",
+  "detect": {
+    "files": ["shard.yml", "shard.lock"],
+    "dirs": [".crystal"]
+  },
+  "rules": {
+    "gitignore": [
+      ".crystal/",
+      ".shards/",
+      "doc/",
+      "*.dSYM/"
+    ],
+    "vscode": {
+      "files.exclude": {
+        ".shards": true,
+        "doc": true
+      }
+    }
+  }
+}

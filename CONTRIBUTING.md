@@ -1,12 +1,12 @@
 # Contributing to siig-rules
 
-Thanks for helping SIIG recognize more stacks and generate safer ignore files. Every JSON file you add here gets embedded into the SIIG binary on the next release — so your contribution reaches every SIIG user automatically.
+Thanks for helping SIIG recognize more stacks and generate safer ignore files. A merged rule reaches users two ways: SIIG fetches it from this repo the moment it lands (for stacks its current binary does not embed), and it is compiled into the binary after SIIG's sync pull request is merged and a release is cut.
 
 ---
 
 ## Before you start
 
-Check the [supported stacks list](./README.md#supported-stacks-110) — if your stack is already there, no need to add it again.
+Check the [supported stacks list](./README.md#supported-stacks-122) — if your stack is already there, no need to add it again.
 
 ---
 
@@ -60,19 +60,33 @@ Use a lowercase filename that matches the stack's `id`. Hyphens are allowed, spa
 | `rules.npmignore` | No | Entries added to `.npmignore`. |
 | `rules.vscode` | No | `files.exclude` map — hides noisy dirs in VS Code Explorer. |
 
-**3. Test it locally**
+**3. Validate it**
 
 ```bash
-# Copy your file into SIIG
+go run ./cmd/validate          # checks every file in db/, including yours
+```
+
+CI runs the same check on every pull request, plus the unit tests for the
+validator itself. SIIG rejects a fetched rule that fails these limits, so a
+rule that merges broken would simply never apply for anyone.
+
+Hard limits enforced by both the validator and SIIG:
+
+| Constraint | Why |
+|---|---|
+| filename = `id`, lowercase kebab-case, ≤64 chars | the id is the fetch URL and the cache filename |
+| `name` present, ≤80 characters | shown in SIIG output |
+| ≤512 entries per rule group, ≤256 characters per entry | a fetched rule is written straight into the user's file |
+| no entry may contain a newline | `"a\n*"` would inject an extra rule line into `.gitignore` |
+| `detect` required; `null` only for `global.json` | a rule with no detection can never match |
+| no unknown JSON fields | a typo'd field silently does nothing |
+
+To see how SIIG treats your rule end to end, copy it into a local SIIG build:
+
+```bash
 cp db/gleam.json path/to/SIIG/rules/db/
-
-# Rebuild SIIG
-cd path/to/SIIG
-go build -o siig .
-
-# Test in a real Gleam project
-cd your-gleam-project
-siig --dry-run --verbose
+cd path/to/SIIG && go build -o siig .
+cd your-gleam-project && siig --dry-run --verbose
 ```
 
 Your stack should appear in the "Detected Stacks" list.
@@ -100,21 +114,33 @@ Your stack should appear in the "Detected Stacks" list.
 
 ❌ **Don't add source files** — only outputs, caches, and generated files.
 
+❌ **Don't use generic directory names for detection** — `build`, `dist`, `output`, `target` and `node_modules` appear in unrelated projects. `nimcache`, `_opam`, `.lake`, `.pio` are safe because only their stack creates them. Prefer a specific marker file (`gleam.toml`, `fpm.toml`, `lean-toolchain`) over a directory when you can.
+
+❌ **Don't rely on entry-point filenames** — SIIG only counts names like `index.js`, `app.py` or `server.ts` at the project root, because a nested one proves nothing. Pick a stack-specific file instead.
+
+❌ **Don't detect on files SIIG writes** — `.gitignore`, `.vercelignore`, `.dockerignore` and `.npmignore` are ignored as detection input when they already carry SIIG's marker, otherwise a second run would detect its own output.
+
 ---
 
 ## What happens after your PR is merged
 
 ```
-PR merged → Monday sync → new SIIG release → users get your stack automatically
+PR merged into siig-rules main
+        ↓
+SIIG fetches db/<your-stack>.json on demand → users with an older binary get it immediately (cached 7 days)
+        ↓
+SIIG's weekly sync opens a pull request with the new files
+        ↓
+SIIG CI + a maintainer merge it → a tagged release embeds it → works offline from then on
 ```
 
-No further action needed from you. SIIG's CI picks up the new file, rebuilds the binary with it embedded, and publishes a new release. Every SIIG user gets your stack on their next update.
+The sync never pushes to `main` or publishes a release by itself — shipping is decided by SIIG's CI and a human review.
 
 ---
 
 ## What not to add
 
-- Stacks already in the [supported list](./README.md#supported-stacks-110)
+- Stacks already in the [supported list](./README.md#supported-stacks-122)
 - Rules that are too broad and would match unrelated projects
 - Source files in any ignore list
 - Entries already covered by `global.json`

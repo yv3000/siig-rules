@@ -1,0 +1,22 @@
+{
+  "id": "nim",
+  "name": "Nim",
+  "detect": {
+    "files": ["*.nimble", "config.nims"],
+    "dirs": ["nimcache"]
+  },
+  "rules": {
+    "gitignore": [
+      "nimcache/",
+      "*.o",
+      "*.so",
+      "*.dll",
+      "*.exe"
+    ],
+    "vscode": {
+      "files.exclude": {
+        "nimcache": true
+      }
+    }
+  }
+}

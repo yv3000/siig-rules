@@ -1,0 +1,23 @@
+{
+  "id": "platformio",
+  "name": "PlatformIO",
+  "detect": {
+    "files": ["platformio.ini"],
+    "dirs": [".pio"]
+  },
+  "rules": {
+    "gitignore": [
+      ".pio/",
+      ".pioenvs/",
+      ".piolibdeps/",
+      "*.elf",
+      "*.hex",
+      "*.uf2"
+    ],
+    "vscode": {
+      "files.exclude": {
+        ".pio": true
+      }
+    }
+  }
+}

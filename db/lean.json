@@ -1,0 +1,19 @@
+{
+  "id": "lean",
+  "name": "Lean 4",
+  "detect": {
+    "files": ["lean-toolchain", "lakefile.lean", "lakefile.toml"],
+    "dirs": [".lake"]
+  },
+  "rules": {
+    "gitignore": [
+      ".lake/",
+      "*.olean"
+    ],
+    "vscode": {
+      "files.exclude": {
+        ".lake": true
+      }
+    }
+  }
+}

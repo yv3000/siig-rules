@@ -1,0 +1,19 @@
+{
+  "id": "gleam",
+  "name": "Gleam",
+  "detect": {
+    "files": ["gleam.toml"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "build/",
+      "erl_crash.dump"
+    ],
+    "vscode": {
+      "files.exclude": {
+        "build": true
+      }
+    }
+  }
+}
