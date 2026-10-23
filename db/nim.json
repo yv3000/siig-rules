@@ -2,7 +2,7 @@
   "id": "nim",
   "name": "Nim",
   "detect": {
-    "files": ["*.nimble", "config.nims"],
+    "files": ["nim.cfg", "*.nimble", "config.nims"],
     "dirs": ["nimcache"]
   },
   "rules": {
