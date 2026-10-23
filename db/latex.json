@@ -1,0 +1,23 @@
+{
+  "id": "latex",
+  "name": "LaTeX",
+  "detect": {
+    "files": [".latexmkrc", "latexmkrc", "*.ltx", "*.tex"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "*.aux",
+      "*.bbl",
+      "*.blg",
+      "*.fdb_latexmk",
+      "*.fls",
+      "*.lof",
+      "*.lot",
+      "*.out",
+      "*.toc",
+      "*.synctex.gz",
+      "_minted-*/"
+    ]
+  }
+}
