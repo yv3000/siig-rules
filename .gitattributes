@@ -1,0 +1,8 @@
+# Keep Go and JSON files LF: gofmt reports a CRLF working copy as unformatted,
+# and SIIG reads rule JSON and appends its entries verbatim into ignore files.
+* text=auto eol=lf
+
+*.go text eol=lf
+*.json text eol=lf
+*.yml text eol=lf
+*.md text eol=lf
