@@ -1,0 +1,19 @@
+{
+  "id": "fortran",
+  "name": "Fortran",
+  "detect": {
+    "files": ["fpm.toml", "*.f90", "*.f", "*.for"],
+    "dirs": []
+  },
+  "rules": {
+    "gitignore": [
+      "*.o",
+      "*.mod",
+      "*.smod",
+      "*.obj",
+      "*.exe",
+      "build/",
+      ".fpm_cache/"
+    ]
+  }
+}
