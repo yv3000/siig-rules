@@ -1,0 +1,19 @@
+{
+  "id": "dlang",
+  "name": "D (DUB)",
+  "detect": {
+    "files": ["dub.sdl", "dub.json"],
+    "dirs": [".dub"]
+  },
+  "rules": {
+    "gitignore": [
+      ".dub/",
+      "docs/",
+      "*.o",
+      "*.obj",
+      "*.so",
+      "*.dll",
+      "*.lib"
+    ]
+  }
+}
