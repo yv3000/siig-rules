@@ -1,0 +1,26 @@
+{
+  "id": "solidity",
+  "name": "Solidity (Foundry / Hardhat)",
+  "detect": {
+    "files": ["foundry.toml", "hardhat.config.ts", "hardhat.config.js", "truffle-config.js"],
+    "dirs": ["broadcast"]
+  },
+  "rules": {
+    "gitignore": [
+      "out/",
+      "cache/",
+      "broadcast/",
+      "artifacts/",
+      "typechain-types/",
+      "cache_hardhat/",
+      "deployments/"
+    ],
+    "vscode": {
+      "files.exclude": {
+        "out": true,
+        "cache": true,
+        "artifacts": true
+      }
+    }
+  }
+}
