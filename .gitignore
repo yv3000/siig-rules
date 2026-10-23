@@ -1,0 +1,22 @@
+# Binaries
+/validate
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+
+# Test output
+*.out
+coverage.out
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
